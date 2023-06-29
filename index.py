@@ -13,7 +13,6 @@ reddit = praw.Reddit(
 )
 def run():
   reply_authors = []
-  global submission
   print("letter h funny haha")
   submissions = reddit.subreddit("theletterh").new(limit=2)
   for submission in submissions:
