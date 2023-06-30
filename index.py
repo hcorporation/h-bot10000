@@ -21,9 +21,13 @@ def run():
         reply_authors.append(reply.author)
       if tlc.author == "h-bot9000" and "h-bot10000" not in reply_authors:   
         prob = random.randint(0,100000)
+        prob2 = random.randint(0,10000000000)
         if prob == 1:
           print("JACKPOT")
           tlc.reply("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh")
+        elif prob == 1 & prob2 == 1:
+          print("DOUBLE JACKPOT")
+          tlc.reply("e (there is a one in like a bajillion chance that i reply with e. if you see this, consider it good luck)")
         else:
           tlc.reply("h")
         reply_authors = []
