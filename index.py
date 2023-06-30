@@ -27,7 +27,7 @@ def run():
           tlc.reply("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh")
         elif prob == 1 & prob2 == 1:
           print("DOUBLE JACKPOT")
-          tlc.reply("e (there is a one in like a bajillion chance that i reply with e. if you see this, consider it good luck)")
+          tlc.reply("e (tHere is a one in like a bajillion cHance that i reply witH e. if you see tHis, consider it qood luck)")
         else:
           tlc.reply("h")
         reply_authors = []
