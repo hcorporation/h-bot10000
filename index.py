@@ -23,21 +23,15 @@ def run():
         prob = random.randint(0,100000)
         prob2 = random.randint(0,10000000000)
         if prob == 1 & prob2 != 1:
-          print("JACKPOT")
           tlc.reply("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh")
         elif prob == 1 & prob2 == 1:
-          print("DOUBLE JACKPOT")
           tlc.reply("e (tHere is a one in like a bajillion cHance that i reply witH e. if you see tHis, consider it qood luck)")
         else:
           tlc.reply("h")
         reply_authors = []
-        print("sent without error")
       elif "h-bot10000" in reply_authors:
         reply_authors = []
-        print("already sent reply")
-  print("waiting...")
   time.sleep(60)
-  print("back")
   run()
 
 run()
