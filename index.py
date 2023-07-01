@@ -12,7 +12,6 @@ reddit = praw.Reddit(
     username=os.getenv("USERNAME"),
     password=os.getenv("PASSWORD")
 )
-print("logged in")
 def run():
   reply_authors = []
   submissions = reddit.subreddit("theletterh").new(limit=2)
