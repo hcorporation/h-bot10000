@@ -1,2 +1,5 @@
 env/
 .vscode/
+LICENSE
+readme.md 
+.gitignore
