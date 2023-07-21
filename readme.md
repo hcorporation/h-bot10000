@@ -19,9 +19,9 @@ PASSWORD=(your account's password in quotation marks)
 8. install python if not installed, and then open up command prompt for windows or terminal for mac and run
 ```python
 pip3 install -r requirements.txt
-python3 index.py
+python3 default.py & python3 additions.py
 ```
-9. if it is successful, the terminal should not show anythinq. dont worry! the bot is already runninq. you can press ctrl c to stop the bot at any time.
+9. if it is successful, the terminal should show `successfully connected to reddit`. you can press ctrl c to stop the bot at any time.
 10. if you do not plan on deployinq the bot to https://fly.io/, then you can delete the .dockeriqnore, swapenable.sh and fly.toml files. otherwise, you can just run the command 
 ```
 fly deploy
