@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "h-bot10000"
+version = "1.0.0-beta"
+description = "an h bot on r/theletterh"
+authors = ["neeeerrrdd"]
+license = "The Unlicense"
+readme = "readme.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+praw = "^7.7.1"
+python-dotenv = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core==1.5.1"]
+build-backend = "poetry.core.masonry.api"

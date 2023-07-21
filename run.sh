@@ -1,1 +1,1 @@
-python3 default.py & python3 additions.py
+poetry run python default.py & poetry run python additions.py
