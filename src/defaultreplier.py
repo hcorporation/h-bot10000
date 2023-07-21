@@ -5,8 +5,8 @@ from helper.usefulcomponents import Components
 def defaultreplier(reddit):
   components = Components(reddit)
   submissions = components.new_submissions()
-  repliers = []
   for submission in submissions:
+    repliers = []
     for tlc in submission.comments:
         for reply in tlc.replies:
             repliers.append(reply.author)
