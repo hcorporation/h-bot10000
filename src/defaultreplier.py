@@ -3,7 +3,6 @@ import time
 from helper.usefulcomponents import Components
 
 def defaultreplier(reddit):
-  reply_authors = []
   components = Components(reddit)
   comments = components.new_comments()
   for comment in comments:
