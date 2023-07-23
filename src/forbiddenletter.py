@@ -20,6 +20,10 @@ def forbiddenletter(reddit):
                 username = mention.body.replace("/u/h-bot10000 !forbiddenLetter ", "")
             elif "u/h-bot10000" in mention.body:
                 username = mention.body.replace("u/h-bot10000 !forbiddenLetter ", "")
+            if "/u/" in username:
+                username = username.replace("/u/", "")
+            elif "u/" in username:
+                username = username.replace("u/", "")
             try:
                 replier(mention, forbiddencount, username)
             except:
