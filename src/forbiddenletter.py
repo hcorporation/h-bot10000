@@ -24,5 +24,5 @@ def forbiddenletter(reddit):
                 replier(mention, forbiddencount, username)
             except:
                 mention.reply("an error occurred. doesn't seem right? report it [here](https://github.com/neeeerrd/h-bot10000/issues)")
-        elif "among us" in mention.body:
+        else:
             mention.reply("h")
