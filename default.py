@@ -8,7 +8,6 @@ def replier():
     try:
         defaultreplier(reddit)
     except:
-        print("error 500. waiting...")
         time.sleep(60)
         replier()
 replier()
