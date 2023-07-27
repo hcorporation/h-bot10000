@@ -1,5 +1,4 @@
 import random
-import time
 from helper.usefulcomponents import Components
 
 def defaultreplier(reddit):
