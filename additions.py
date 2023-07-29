@@ -1,10 +1,15 @@
 from helper.reddit import reddit
-from src.forbiddenletter import forbiddenletter
+from helper.mentions import mentionuser
 import time
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 def replier():
+    key = os.getenv("OPENAI_KEY") 
     try:
-        forbiddenletter(reddit)
+        mentionuser(reddit, key)
     except:
         time.sleep(60)
         replier()
