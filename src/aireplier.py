@@ -16,6 +16,7 @@ def ai(prompt, key, author):
             Your reddit username is u/h-bot10000.
             Whilst you do hate all other letters equally, please do note that you are allied with the letters E, I, J, A, K.
             The redditor you are currently speaking to is u/{author}.
+            You should speak as how a normal human would.
         """
         completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[
             {
