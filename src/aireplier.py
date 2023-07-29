@@ -27,7 +27,7 @@ def ai(prompt, key, author):
                  "content": prompt
             }
         ])
-        generatedText = completion.choices[0].message.content + "\n\n*****\n\n^(disclaimer: everything in this comment aside from this has been qenerated by ai. as such, i cannot quarantee the quality of the text it qenerates. however, you can help by reportinq misbehaviors) [^(here)](https://github.com/neeeerrd/h-bot10000/issues)."
+        generatedText = completion.choices[0].message.content + "\n\n*****\n\n^(disclaimer: everythinq in this comment aside from this has been qenerated by ai. as such, i cannot quarantee the quality of the text it qenerates. however, you can help by reportinq misbehaviors) [^(here)](https://github.com/neeeerrd/h-bot10000/issues)"
     else:
         generatedText = "you need a prompt to use the ai."
     return generatedText
