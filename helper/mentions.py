@@ -1,6 +1,7 @@
 from helper.usefulcomponents import Components
 from src.aireplier import ai
 from src.forbiddenletter import forbiddenletter
+from src.topposts import topposts
 
 def mentionuser(reddit, key):
     components = Components(reddit)
@@ -29,6 +30,16 @@ def mentionuser(reddit, key):
                 prompt = mention.body.replace("/u/h-bot10000 !betaAi ", "")
             try:
                 reply = ai(prompt, key, mention.author)
+                mention.reply(reply)
+            except:
+                mention.reply(error_reply)
+        elif "u/h-bot10000 !topPosts" in mention.body:
+            if "/u/h-bot10000" in mention.body:
+                range = mention.body.replace("/u/h-bot10000 !topPosts ", "")
+            elif "u/h-bot10000" in mention.body:
+                range = mention.body.replace("u/h-bot10000 !topPosts ", "")
+            try:
+                reply = topposts(reddit, range)
                 mention.reply(reply)
             except:
                 mention.reply(error_reply)

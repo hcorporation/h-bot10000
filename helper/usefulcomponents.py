@@ -12,3 +12,5 @@ class Components:
     def new_mentions(self):
         mentions = self.reddit.inbox.mentions
         return praw.models.util.stream_generator(mentions, skip_existing=True)
+    def top_posts(self, range):
+        return self.reddit.subreddit("theletterh").top(limit=5, time_filter=range)
