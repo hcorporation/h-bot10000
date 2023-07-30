@@ -8,7 +8,7 @@ def mentionuser(reddit, key):
     new_mentions = components.new_mentions()
     error_reply = "an error occurred. doesn't seem right? report it [here](https://github.com/neeeerrd/h-bot10000)"
     for mention in new_mentions:
-        if "u/h-bot10000 !forbiddenLetter" in mention.body:
+        if "!forbiddenLetter" in mention.body:
             forbiddencount = 0
             if "/u/h-bot10000" in mention.body:
                 username = mention.body.replace("/u/h-bot10000 !forbiddenLetter ", "")
@@ -23,7 +23,7 @@ def mentionuser(reddit, key):
                 mention.reply(reply)
             except:
                 mention.reply(error_reply)
-        elif "u/h-bot10000 !betaAi" in mention.body:
+        elif "!betaAi" in mention.body:
             if "/u/h-bot10000" in mention.body:
                 prompt = mention.body.replace("/u/h-bot10000 !betaAi ", "")
             elif "u/h-bot10000" in mention.body:
@@ -33,7 +33,7 @@ def mentionuser(reddit, key):
                 mention.reply(reply)
             except:
                 mention.reply(error_reply)
-        elif "u/h-bot10000 !topPosts" in mention.body:
+        elif "!topPosts" in mention.body:
             if "/u/h-bot10000" in mention.body:
                 range = mention.body.replace("/u/h-bot10000 !topPosts ", "")
             elif "u/h-bot10000" in mention.body:
@@ -43,5 +43,8 @@ def mentionuser(reddit, key):
                 mention.reply(reply)
             except:
                 mention.reply(error_reply)
+        elif "!copypasta" in mention.body:
+            file = open("assets/copypasta.txt")
+            mention.reply(file.read())
         else:
             mention.reply("h")
