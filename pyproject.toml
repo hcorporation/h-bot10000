@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "h-bot10000"
-version = "1.0.0"
+version = "1.1.0"
 description = "an h bot on r/theletterh"
 authors = ["neeeerrrdd"]
 license = "The Unlicense"
