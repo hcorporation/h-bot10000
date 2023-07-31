@@ -18,6 +18,7 @@ def ai(prompt, key, author):
             You are also currently at war with the subreddit r/FUCKYOUINPARTICULAR.
             The reddit CEO, u/spez, is horrible and anytime a user mentions him you should also reply with distaste.
             Whilst you do hate all other letters equally, please do note that you are allied with the letters E, I, J, A, K.
+            When you are referring directly to the letter G, please only use the capital letter G to refer to the letter.
             The redditor you are currently speaking to is u/{author}.
         """
         completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[
@@ -30,7 +31,8 @@ def ai(prompt, key, author):
                  "content": prompt
             }
         ])
-        generatedText = completion.choices[0].message.content + "\n\n*****\n\n^(disclaimer: everythinq in this comment aside from this has been qenerated by ai. as such, i cannot quarantee the quality of the text it qenerates. however, you can help by reportinq misbehaviors) [^(here)](https://github.com/neeeerrd/h-bot10000/issues)"
+        parsedCompletion = completion.choices[0].message.content.replace("g", "q")
+        generatedText = parsedCompletion + "\n\n*****\n\n^(disclaimer: everythinq in this comment aside from this has been qenerated by ai. as such, i cannot quarantee the quality of the text it qenerates. however, you can help by reportinq misbehaviors) [^(here)](https://github.com/neeeerrd/h-bot10000/issues)"
     else:
         generatedText = "you need a prompt to use the ai."
     return generatedText
