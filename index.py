@@ -14,7 +14,7 @@ reddit = praw.Reddit(
 
 def bot():
     try:
-        for post in reddit.subreddit("hbot10000test").stream.submissions(skip_existing=True):
+        for post in reddit.subreddit("theletterh").stream.submissions(skip_existing=True):
             number = random.choice([0,1])
             if number == 0:
                 post.reply("h")
