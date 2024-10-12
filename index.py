@@ -12,7 +12,7 @@ reddit = praw.Reddit(
     password=os.getenv("PASSWORD")
 )
 
-def bot():
+while True:
     try:
         for post in reddit.subreddit("theletterh").stream.submissions(skip_existing=True):
             number = random.choice([0,1])
@@ -24,7 +24,6 @@ def bot():
         print(e)
         if "invalid_grant" in str(e):
             print("log out and log in again on reddit.com to rectify this issue.")
+            break
         else:
-            bot()
-
-bot() 
+            continue
