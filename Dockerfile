@@ -5,4 +5,4 @@ WORKDIR /hbot
 COPY poetry.lock pyproject.toml /hbot/
 RUN poetry install --no-interaction --no-ansi
 COPY . /hbot/
-CMD poetry run python index.py
+CMD poetry install && poetry run python index.py
